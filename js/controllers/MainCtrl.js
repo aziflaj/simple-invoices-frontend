@@ -6,6 +6,6 @@
 
   function MainCtrl() {
     var vm = this;
-    vm.greeting = "Hello, World";
+    vm.greeting = 'Hello, World';
   }
 })();
