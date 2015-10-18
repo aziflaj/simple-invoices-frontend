@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 gulp.task('sass', function() {
   gulp.src('./sass/**/*.scss')
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+      .pipe(concat('style.css'))
       .pipe(gulp.dest('./build'));
 });
 
