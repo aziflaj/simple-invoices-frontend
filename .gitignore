@@ -1,0 +1,12 @@
+# app specific files/folders
+build/
+
+# npm dependencies
+node_modules/
+*.log
+
+# bower libs
+libs/
+.bower-cache
+.bower-registry
+.bower-tmp

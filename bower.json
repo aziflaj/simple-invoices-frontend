@@ -1,0 +1,20 @@
+{
+  "name": "SimpleInvoices-UI",
+  "version": "0.1.0",
+  "authors": [
+    "Aldo Ziflaj <aldoziflaj95@gmail.com>"
+  ],
+  "description": "Front-End code for the Simple Invoices project",
+  "main": "index.html",
+  "keywords": [
+    "simple",
+    "invoices",
+    "52",
+    "ember",
+    "spa"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "1.4.7"
+  }
+}

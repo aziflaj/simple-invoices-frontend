@@ -1,0 +1,26 @@
+{
+  "name": "SimpleInvoices-UI",
+  "version": "0.1.0",
+  "description": "Front-End code for the Simple Invoices project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "simple",
+    "invoices",
+    "52",
+    "ember",
+    "spa"
+  ],
+  "author": "Aldo Ziflaj <aldoziflaj95@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-sass": "~2.0.4",
+    "gulp-uglify": "~1.4.2",
+    "gulp-concat": "~2.6.0",
+    "gulp-connect": "~2.2.0",
+    "gulp-watch": "~4.3.5"
+  }
+}
