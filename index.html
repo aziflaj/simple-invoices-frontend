@@ -3,15 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>Simple Invoices</title>
+    <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/angularjs-datepicker/dist/angular-datepicker.min.css">
     <link rel="stylesheet" href="build/style.css">
 </head>
 <body>
 
-<div class="greeting" ng-controller="MainCtrl as vm">
-  {{vm.greeting}}
-</div>
+<header>
+  <nav class="navbar navbar-inverse">
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="content container">
+  <div class="row">
+    <section class="fill-invoice col-md-8 col-sm-12">
+      <div>
+        Insert image
+      </div>
+      <div>
+        <div class="input-group">
+          <span class="input-group-addon">#</span>
+          <input type="text" class="form-control" value="1">
+        </div>
+
+        <div ng-controller="DateCtrl as d">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="send-date" class="col-sm-2 control-label">Date</label>
+              <datepicker date-format="{{d.dateFormat}}" class="col-sm-4">
+                <input type="text" class="form-control" id="send-date" ng-model="d.date" />
+              </datepicker>
+            </div>
+
+            <div class="form-group">
+              <label for="due-date" class="col-sm-2 control-label">Due Date</label>
+              <datepicker date-format="{{d.dateFormat}}" class="col-sm-4">
+                <input type="text" class="form-control" id="due-date" ng-model="d.dueDate" />
+              </datepicker>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div>
+        <div>from</div>
+        <div>to</div>
+      </div>
+
+      <div>table</div>
+
+    </section>
+
+    <section class="invoice-controls col-md-4 col-sm-12">
+      <!-- invoice controls here -->
+    </section>
+  </div>
+</section>
 
 <script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular-moment/angular-moment.min.js"></script>
+<script src="libs/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
 <script src="build/all.js"></script>
 </body>
 </html>
