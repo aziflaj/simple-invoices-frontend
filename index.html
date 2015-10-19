@@ -32,7 +32,7 @@
           <input type="text" class="form-control" value="1">
         </div>
 
-        <div ng-controller="DateCtrl as d">
+        <div ng-controller="DateCtrl as d" class="datepickers">
           <form class="form-horizontal">
             <div class="form-group">
               <label for="send-date" class="col-sm-2 control-label">Date</label>
@@ -52,11 +52,33 @@
       </div>
 
       <div>
-        <div>from</div>
-        <div>to</div>
+        <div>
+          <textarea class="form-control" rows="2" cols="40" placeholder="Who is sending the invoice"></textarea>
+        </div>
+        <div>
+          To
+          <textarea class="form-control" rows="2" cols="40" placeholder="Who is getting the invoice"></textarea>
+        </div>
       </div>
 
-      <div>table</div>
+      <div>
+        <table class="table table-striped">
+          <tr>
+            <th>#</th>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Item1</td>
+            <td>4</td>
+            <td>8</td>
+            <td>25</td>
+          </tr>
+        </table>
+      </div>
 
     </section>
 
