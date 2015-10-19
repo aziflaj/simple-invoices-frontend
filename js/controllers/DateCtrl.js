@@ -4,7 +4,7 @@
   angular.module('simple-invoices')
     .controller('DateCtrl', DateCtrl);
 
-  DateCtrl.$inject = ['DateHelper']
+  DateCtrl.$inject = ['DateHelper'];
 
   function DateCtrl(DateHelper) {
     var vm = this;
