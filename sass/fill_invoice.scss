@@ -1,9 +1,19 @@
 .fill-invoice {
   background: #ffffff;
+  padding: 2em;
 
   .invoice-title {
     text-decoration: capitalize;
     font-size: 2.4em;
+  }
+
+  .datepickers {
+    padding: 1em 0;
+    float: right;
+  }
+
+  .invoice-items {
+    padding-top: 5em;
   }
 
   input[type='number'] {

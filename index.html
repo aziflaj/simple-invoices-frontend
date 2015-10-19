@@ -23,45 +23,55 @@
 <section class="content container">
   <div class="row">
     <section class="fill-invoice col-md-8 col-sm-12">
-      <div>
-        Insert image
-      </div>
-      <div>
-        <div class="input-group">
-          <span class="input-group-addon">#</span>
-          <input type="text" class="form-control" value="1">
-        </div>
-
-        <div ng-controller="DateCtrl as d" class="datepickers">
-          <form class="form-horizontal">
-            <div class="form-group">
-              <label for="send-date" class="col-sm-2 control-label">Date</label>
-              <datepicker date-format="dd MMM yyyy" class="col-sm-4">
-                <input type="text" class="form-control" id="send-date" ng-model="d.date" />
-              </datepicker>
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <div>
+            Insert image
+          </div>
+          <div>
+            <div>
+              <textarea class="form-control" rows="2" cols="40" placeholder="Who is sending the invoice"></textarea>
             </div>
-
-            <div class="form-group">
-              <label for="due-date" class="col-sm-2 control-label">Due Date</label>
-              <datepicker date-format="dd MMM yyyy" class="col-sm-4">
-                <input type="text" class="form-control" id="due-date" ng-model="d.dueDate" />
-              </datepicker>
+            <div>
+              To
+              <textarea class="form-control" rows="2" cols="40" placeholder="Who is getting the invoice"></textarea>
             </div>
-          </form>
+          </div>
         </div>
+
+        <div class="col-sm-12 col-md-6">
+          <div class="form-group pull-right">
+            <label for="invoice-number" class="col-sm-3 control-label">Number</label>
+            <div class="input-group col-sm-8">
+              <span class="input-group-addon">#</span>
+              <input type="text" id="invoice-number" class="form-control" value="1">
+            </div>
+          </div>
+
+
+          <div ng-controller="DateCtrl as d" class="datepickers pull-right">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="send-date" class="col-sm-6 control-label">Date</label>
+                <datepicker date-format="dd MMM yyyy" class="col-sm-6">
+                  <input type="text" class="form-control" id="send-date" ng-model="d.date" />
+                </datepicker>
+              </div>
+
+              <div class="form-group">
+                <label for="due-date" class="col-sm-6 control-label">Due Date</label>
+                <datepicker date-format="dd MMM yyyy" class="col-sm-6">
+                  <input type="text" class="form-control" id="due-date" ng-model="d.dueDate" />
+                </datepicker>
+              </div>
+            </form>
+          </div>
+        </div>
+
       </div>
 
-      <div>
-        <div>
-          <textarea class="form-control" rows="2" cols="40" placeholder="Who is sending the invoice"></textarea>
-        </div>
-        <div>
-          To
-          <textarea class="form-control" rows="2" cols="40" placeholder="Who is getting the invoice"></textarea>
-        </div>
-      </div>
 
-      <div ng-controller="InvoiceCtrl as i">
+      <div ng-controller="InvoiceCtrl as i" class="invoice-items">
         <table class="table table-striped">
           <tr>
             <th>Item</th>
