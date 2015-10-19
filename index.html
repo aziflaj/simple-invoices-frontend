@@ -36,14 +36,14 @@
           <form class="form-horizontal">
             <div class="form-group">
               <label for="send-date" class="col-sm-2 control-label">Date</label>
-              <datepicker date-format="{{d.dateFormat}}" class="col-sm-4">
+              <datepicker date-format="dd MMM yyyy" class="col-sm-4">
                 <input type="text" class="form-control" id="send-date" ng-model="d.date" />
               </datepicker>
             </div>
 
             <div class="form-group">
               <label for="due-date" class="col-sm-2 control-label">Due Date</label>
-              <datepicker date-format="{{d.dateFormat}}" class="col-sm-4">
+              <datepicker date-format="dd MMM yyyy" class="col-sm-4">
                 <input type="text" class="form-control" id="due-date" ng-model="d.dueDate" />
               </datepicker>
             </div>
@@ -67,7 +67,6 @@
 </section>
 
 <script src="libs/angular/angular.min.js"></script>
-<script src="libs/angular-moment/angular-moment.min.js"></script>
 <script src="libs/angularjs-datepicker/dist/angular-datepicker.min.js"></script>
 <script src="build/all.js"></script>
 </body>
