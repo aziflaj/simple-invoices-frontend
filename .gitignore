@@ -10,3 +10,6 @@ libs/
 .bower-cache
 .bower-registry
 .bower-tmp
+
+# temp files
+*.temp.*

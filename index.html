@@ -21,91 +21,88 @@
 </header>
 
 <section class="content container">
-  <div class="row">
-    <section class="fill-invoice col-md-8 col-sm-12">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
+
+  <section class="fill-invoice">
+    <section class="invoice-header row">
+      <div class="col-md-6">
+        <div>
+          Insert image
+        </div>
+        <div>
           <div>
-            Insert image
+            <textarea class="form-control" rows="2" cols="40" placeholder="Who is sending the invoice"></textarea>
           </div>
           <div>
-            <div>
-              <textarea class="form-control" rows="2" cols="40" placeholder="Who is sending the invoice"></textarea>
-            </div>
-            <div>
-              To
-              <textarea class="form-control" rows="2" cols="40" placeholder="Who is getting the invoice"></textarea>
-            </div>
+            To
+            <textarea class="form-control" rows="2" cols="40" placeholder="Who is getting the invoice"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="form-group pull-right">
+          <label for="invoice-number" class="col-sm-3 control-label">Number</label>
+          <div class="input-group col-sm-8">
+            <span class="input-group-addon">#</span>
+            <input type="text" id="invoice-number" class="form-control" value="1">
           </div>
         </div>
 
-        <div class="col-sm-12 col-md-6">
-          <div class="form-group pull-right">
-            <label for="invoice-number" class="col-sm-3 control-label">Number</label>
-            <div class="input-group col-sm-8">
-              <span class="input-group-addon">#</span>
-              <input type="text" id="invoice-number" class="form-control" value="1">
+
+        <div ng-controller="DateCtrl as d" class="datepickers pull-right">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="send-date" class="col-sm-6 control-label">Date</label>
+              <datepicker date-format="dd MMM yyyy" class="col-sm-6">
+                <input type="text" class="form-control" id="send-date" ng-model="d.date" />
+              </datepicker>
             </div>
-          </div>
 
-
-          <div ng-controller="DateCtrl as d" class="datepickers pull-right">
-            <form class="form-horizontal">
-              <div class="form-group">
-                <label for="send-date" class="col-sm-6 control-label">Date</label>
-                <datepicker date-format="dd MMM yyyy" class="col-sm-6">
-                  <input type="text" class="form-control" id="send-date" ng-model="d.date" />
-                </datepicker>
-              </div>
-
-              <div class="form-group">
-                <label for="due-date" class="col-sm-6 control-label">Due Date</label>
-                <datepicker date-format="dd MMM yyyy" class="col-sm-6">
-                  <input type="text" class="form-control" id="due-date" ng-model="d.dueDate" />
-                </datepicker>
-              </div>
-            </form>
-          </div>
+            <div class="form-group">
+              <label for="due-date" class="col-sm-6 control-label">Due Date</label>
+              <datepicker date-format="dd MMM yyyy" class="col-sm-6">
+                <input type="text" class="form-control" id="due-date" ng-model="d.dueDate" />
+              </datepicker>
+            </div>
+          </form>
         </div>
-
       </div>
-
-
-      <div ng-controller="InvoiceCtrl as i" class="invoice-items">
-        <table class="table table-striped">
-          <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Rate</th>
-            <th>Amount</th>
-          </tr>
-          <tr>
-            <td>
-              <input type="text" class="form-control" placeholder="Item name" ng-model="i.name">
-            </td>
-            <td>
-              <input type="number" class="form-control" placeholder="Quantity" ng-model="i.quantity">
-            </td>
-            <td>
-              <div class="input-group">
-                <span class="input-group-addon">$</span>
-                <input type="number" class="form-control" ng-model="i.rate">
-              </div>
-            </td>
-            <td>
-              {{i.quantity * i.rate}}
-            </td>
-          </tr>
-        </table>
-        <button type="button" class="btn btn-primary" ng-click="showVars()">Add item</button>
-      </div>
-
     </section>
 
-    <section class="invoice-controls col-md-4 col-sm-12">
-      <!-- invoice controls here -->
+    <section class="invoice-items" ng-controller="InvoiceCtrl as i">
+      <table class="table table-striped">
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Rate</th>
+          <th>Amount</th>
+        </tr>
+        <tr>
+          <td>
+            <input type="text" class="form-control" placeholder="Item name" ng-model="i.name">
+          </td>
+          <td>
+            <input type="number" class="form-control" placeholder="Quantity" ng-model="i.quantity">
+          </td>
+          <td>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="number" class="form-control" ng-model="i.rate">
+            </div>
+          </td>
+          <td>
+            {{i.quantity * i.rate}}
+          </td>
+        </tr>
+      </table>
+      <button type="button" class="btn btn-primary" ng-click="showVars()">Add item</button>
     </section>
-  </div>
+  </section>
+
+  <aside class="invoice-controls">
+    <!-- invoice controls here -->
+  </aside>
+
 </section>
 
 <script src="libs/angular/angular.min.js"></script>
