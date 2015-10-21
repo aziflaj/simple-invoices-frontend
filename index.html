@@ -40,16 +40,18 @@
       </div>
 
       <div class="col-md-6">
-        <div class="form-group pull-right">
-          <label for="invoice-number" class="col-sm-3 control-label">Number</label>
-          <div class="input-group col-sm-8">
-            <span class="input-group-addon">#</span>
-            <input type="text" id="invoice-number" class="form-control" value="1">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="invoice-number" class="col-sm-6 control-label">Number</label>
+            <div class="input-group col-sm-6">
+              <span class="input-group-addon">#</span>
+              <input type="text" id="invoice-number" class="form-control" value="1">
+            </div>
           </div>
-        </div>
+        </form>
 
 
-        <div ng-controller="DateCtrl as d" class="datepickers pull-right">
+        <div ng-controller="DateCtrl as d" class="datepickers">
           <form class="form-horizontal">
             <div class="form-group">
               <label for="send-date" class="col-sm-6 control-label">Date</label>

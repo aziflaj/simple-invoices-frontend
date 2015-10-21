@@ -4,26 +4,22 @@
   width: 70%;
   display: inline-block;
 
+  .invoice-header {
+    .form-control#invoice-number {
+      text-align: right;
+    }
+    .datepickers {
+      padding: 1em 0;
+      float: right;
+    }
+  }
+
   .invoice-title {
     text-decoration: capitalize;
     font-size: 2.4em;
   }
 
-  .datepickers {
-    padding: 1em 0;
-    float: right;
-  }
-
   .invoice-items {
     padding-top: 5em;
-  }
-
-  input[type='number'] {
-    -moz-appearance:textfield;
-  }
-
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
   }
 }
