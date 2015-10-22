@@ -15,11 +15,20 @@
     vm.itemList = [itemStub];
 
     vm.addNewItem = addNewItem;
+    vm.calculateTotal = calculateTotal;
 
     ///////////
     function addNewItem() {
       vm.itemList.push(itemStub);
-      //console.log(vm.amount);
+    }
+
+    function calculateTotal() {
+      var sum = 0;
+      for (var i = 0; i < vm.itemList.length; i++) {
+        sum += vm.itemList[i].amount;
+      }
+
+      return sum;
     }
   }
 })();

@@ -1,3 +1,6 @@
+<div class="text-right">
+  <strong>Total: $ {{i.calculateTotal()}}</strong>
+</div>
 <table class="table table-striped">
   <tr>
     <th>Item</th>
@@ -5,7 +8,7 @@
     <th>Rate</th>
     <th>Amount</th>
   </tr>
-  <tr ng-repeat="item in i.itemList">
+  <tr ng-repeat="item in i.itemList track by $index">
     <td>
       <input type="text" class="form-control" placeholder="Item name" ng-model="item.name">
     </td>
@@ -19,8 +22,8 @@
       </div>
     </td>
     <td>
-      {{ item.quantity * item.rate}}
+      {{ item.amount = item.quantity * item.rate}}
     </td>
   </tr>
 </table>
-<button type="button" class="btn btn-primary" ng-click="addNewItem()">Add item</button>
+<button type="button" class="btn btn-primary" ng-click="i.addNewItem()">Add item</button>
