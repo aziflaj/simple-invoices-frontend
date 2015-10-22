@@ -1,5 +1,5 @@
-<div class="text-right">
-  <strong>Total: $ {{i.calculateTotal()}}</strong>
+<div class="text-right text-total">
+  <strong>Total: &#36; {{i.calculateTotal()}}</strong>
 </div>
 <table class="table table-striped">
   <tr>
@@ -18,7 +18,7 @@
     </td>
     <td>
       <div class="input-group">
-        <span class="input-group-addon">$</span>
+        <span class="input-group-addon">&#36;</span>
         <input type="number" class="form-control" ng-model="item.rate">
       </div>
     </td>
@@ -26,10 +26,36 @@
       {{ item.amount = item.quantity * item.rate}}
     </td>
     <td class="remove-item">
-      <button type="button" class="btn btn-link btn-xs remove-item-button" ng-click="i.removeItem($index)">
-        <span class="glyphicon glyphicon-remove"></span>
+      <button type="button" class="close" aria-label="Close" ng-click="i.removeItem($index)">
+        <span aria-hidden="true">&times;</span>
       </button>
     </td>
   </tr>
 </table>
 <button type="button" class="btn btn-primary" ng-click="i.addNewItem()">Add item</button>
+
+<div class="invoice-total">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="subtotal" class="col-sm-6 control-label">Subtotal</label>
+      <div class="col-sm-6 input-group">
+        <span class="input-group-addon">&#36;</span>
+        <input type="number" class="form-control" id="subtotal" value="{{i.subtotal()}}" readonly>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="tax" class="col-sm-6 control-label">Flat Tax</label>
+      <div class="col-sm-6 input-group">
+        <span class="input-group-addon">&#36;</span>
+        <input type="number" class="form-control" id="tax" ng-model="i.flatTax">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="total" class="col-sm-6 control-label">Total</label>
+      <div class="col-sm-6 input-group">
+        <span class="input-group-addon">&#36;</span>
+        <input type="number" class="form-control" id="total" value="{{i.calculateTotal()}}" readonly>
+      </div>
+    </div>
+  </form>
+</div>

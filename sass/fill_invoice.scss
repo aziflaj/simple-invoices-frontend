@@ -21,9 +21,18 @@
 
   .invoice-items {
     padding-top: 5em;
-  }
 
-  .remove-item-button {
-    color: #9A0A0A;
+    .text-total {
+      padding: 0 2em 2em 0;
+    }
+
+    .remove-item-button {
+      color: #9A0A0A;
+    }
+
+    .invoice-total {
+      padding-top: 2em;
+      float: right;
+    }
   }
 }
