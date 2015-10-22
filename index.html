@@ -71,33 +71,9 @@
       </div>
     </section>
 
-    <section class="invoice-items" ng-controller="InvoiceCtrl as i">
-      <table class="table table-striped">
-        <tr>
-          <th>Item</th>
-          <th>Quantity</th>
-          <th>Rate</th>
-          <th>Amount</th>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" class="form-control" placeholder="Item name" ng-model="i.name">
-          </td>
-          <td>
-            <input type="number" class="form-control" placeholder="Quantity" ng-model="i.quantity">
-          </td>
-          <td>
-            <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <input type="number" class="form-control" ng-model="i.rate">
-            </div>
-          </td>
-          <td>
-            {{i.quantity * i.rate}}
-          </td>
-        </tr>
-      </table>
-      <button type="button" class="btn btn-primary" ng-click="showVars()">Add item</button>
+    <section class="invoice-items">
+      <si-invoice-items>
+      </si-invoice-items>
     </section>
   </section>
 
