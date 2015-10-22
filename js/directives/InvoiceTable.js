@@ -1,11 +1,11 @@
 (function() {
   angular.module('simple-invoices')
-    .directive('siInvoiceItem', InvoiceItem);
+    .directive('siInvoiceTable', InvoiceTable);
 
-  function InvoiceItem() {
+  function InvoiceTable() {
     var o = {
       restrict: 'EA',
-      templateUrl: 'partials/table-item.html',
+      templateUrl: 'partials/table.html',
       controller: 'InvoiceCtrl',
       controllerAs: 'i'
     };

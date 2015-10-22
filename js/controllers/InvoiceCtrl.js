@@ -6,14 +6,20 @@
 
   function InvoiceCtrl() {
     var vm = this;
-    vm.quantity = 0;
-    vm.rate = 0;
-    vm.amount = vm.quantity * vm.rate;
-    vm.showVars = showVars;
+    var itemStub = {
+      quantity: 0,
+      rate: 0,
+      amount: 0
+    };
+
+    vm.itemList = [itemStub];
+
+    vm.addNewItem = addNewItem;
 
     ///////////
-    function showVars() {
-      console.log(vm.amount);
+    function addNewItem() {
+      vm.itemList.push(itemStub);
+      //console.log(vm.amount);
     }
   }
 })();
