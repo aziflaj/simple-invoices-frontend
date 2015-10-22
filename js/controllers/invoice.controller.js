@@ -16,6 +16,7 @@
 
     vm.addNewItem = addNewItem;
     vm.calculateTotal = calculateTotal;
+    vm.removeItem = removeItem;
 
     ///////////
     function addNewItem() {
@@ -29,6 +30,10 @@
       }
 
       return sum;
+    }
+
+    function removeItem(index) {
+      vm.itemList.splice(index, 1);
     }
   }
 })();
