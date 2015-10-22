@@ -75,13 +75,33 @@
       <si-invoice-table>
       </si-invoice-table>
     </section>
+
+    <section class="row invoice-footer">
+      <form>
+        <div class="notes form-group">
+          <label for="notes">Notes</label>
+          <textarea id="notes" class="form-control" cols="400" rows="3" placeholder="Notes - any relevant information not already covered"></textarea>
+        </div>
+        <div class="terms">
+          <label for="terms">Terms and Conditions</label>
+          <textarea id="terms" class="form-control" rows="3" placeholder="Terms and conditions - late fees, payment methods, delivery schedule"></textarea>
+        </div>
+      </form>
+    </section>
   </section>
 
   <aside class="invoice-controls">
     <!-- invoice controls here -->
   </aside>
-
 </section>
+
+<footer>
+  <ul class="footer-links">
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">The 52 challenge</a></li>
+  </ul>
+</footer>
 
 <script src="libs/angular/angular.min.js"></script>
 <script src="libs/angularjs-datepicker/dist/angular-datepicker.min.js"></script>

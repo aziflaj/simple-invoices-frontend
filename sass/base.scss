@@ -12,3 +12,25 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+
+footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 30%;
+
+  .footer-links {
+    list-style-type: none;
+
+
+    li {
+      display: inline-block;
+      font-size: 1.2em;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+        color: #636363;
+      }
+    }
+  }
+}
