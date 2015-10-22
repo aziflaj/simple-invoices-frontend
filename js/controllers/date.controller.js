@@ -2,11 +2,11 @@
   'use strict';
 
   angular.module('simple-invoices')
-    .controller('DateCtrl', DateCtrl);
+    .controller('DateController', DateController);
 
-  DateCtrl.$inject = ['DateHelper'];
+  DateController.$inject = ['DateHelper'];
 
-  function DateCtrl(DateHelper) {
+  function DateController(DateHelper) {
     var vm = this;
     vm.dateFormat = 'dd MMM yyyy';
     vm.date = DateHelper.formatDate(new Date());

@@ -2,9 +2,9 @@
   'use strict';
 
   angular.module('simple-invoices')
-    .controller('MainCtrl', MainCtrl);
+    .controller('MainController', MainController);
 
-  function MainCtrl() {
+  function MainController() {
     var vm = this;
     vm.greeting = 'Hello, World';
     vm.date = new Date();

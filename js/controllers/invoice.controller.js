@@ -2,9 +2,9 @@
   'use strict';
 
   angular.module('simple-invoices')
-    .controller('InvoiceCtrl', InvoiceCtrl);
+    .controller('InvoiceController', InvoiceController);
 
-  function InvoiceCtrl() {
+  function InvoiceController() {
     var vm = this;
     var itemStub = {
       quantity: 0,

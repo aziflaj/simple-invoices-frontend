@@ -6,7 +6,7 @@
     var o = {
       restrict: 'EA',
       templateUrl: 'partials/table.html',
-      controller: 'InvoiceCtrl',
+      controller: 'InvoiceController',
       controllerAs: 'i'
     };
 
