@@ -4,15 +4,12 @@
   angular.module('simple-invoices')
     .controller('InvoiceController', InvoiceController);
 
-  function InvoiceController() {
-    var vm = this;
-    var itemStub = {
-      quantity: 0,
-      rate: 0,
-      amount: 0
-    };
+  InvoiceController.$inject = ['InvoiceItemFactory'];
 
-    vm.itemList = [itemStub];
+  function InvoiceController(InvoiceItemFactory) {
+    var vm = this;
+
+    vm.itemList = [InvoiceItemFactory.createNewItem()];
     vm.flatTax = 0;
 
     vm.addNewItem = addNewItem;
@@ -22,12 +19,7 @@
 
     ///////////
     function addNewItem() {
-      var newItem = {
-        quantity: 0,
-        rate: 0,
-        amount: 0
-      };
-      vm.itemList.push(newItem);
+      vm.itemList.push(InvoiceItemFactory.createNewItem());
     }
 
     function calculateTotal() {
