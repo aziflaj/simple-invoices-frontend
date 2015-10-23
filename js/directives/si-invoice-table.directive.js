@@ -3,13 +3,13 @@
     .directive('siInvoiceTable', InvoiceTable);
 
   function InvoiceTable() {
-    var o = {
+    var directive = {
       restrict: 'EA',
       templateUrl: 'partials/table.html',
       controller: 'InvoiceController',
       controllerAs: 'i'
     };
 
-    return o;
+    return directive;
   }
 })();

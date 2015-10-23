@@ -22,7 +22,12 @@
 
     ///////////
     function addNewItem() {
-      vm.itemList.push(itemStub);
+      var newItem = {
+        quantity: 0,
+        rate: 0,
+        amount: 0
+      };
+      vm.itemList.push(newItem);
     }
 
     function calculateTotal() {

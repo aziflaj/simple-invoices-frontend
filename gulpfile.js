@@ -15,7 +15,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function() {
-  gulp.src('./js/**/*.js')
+  gulp.src(['./js/**/*.js'])
       .pipe(jshint())
       .pipe(jscs())
       .pipe(jscs.reporter())
